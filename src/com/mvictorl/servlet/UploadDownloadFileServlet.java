@@ -32,7 +32,7 @@ public class UploadDownloadFileServlet extends HttpServlet {
             throw new ServletException("Content type is not multipart/form-data");
         }
 
-        response.setContentType("text/html");
+        response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.write("<html><meta charset=\"UTF-8\"><head></head><body>");
         try {
