@@ -16,10 +16,12 @@ import java.io.*;
 import java.util.Iterator;
 import java.util.List;
 
-@WebServlet("/UploadDownloadFileServlet")
+@WebServlet(urlPatterns = { "/servlet"}, name = "UploadDownloadFileServlet")
 public class UploadDownloadFileServlet extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
     private ServletFileUpload uploader = null;
+
     @Override
     public void init() throws ServletException {
         DiskFileItemFactory fileFactory = new DiskFileItemFactory();
@@ -27,7 +29,9 @@ public class UploadDownloadFileServlet extends HttpServlet {
         fileFactory.setRepository(filesDir);
         this.uploader = new ServletFileUpload(fileFactory);
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         if(!ServletFileUpload.isMultipartContent(request)){
             throw new ServletException("Content type is not multipart/form-data");
         }

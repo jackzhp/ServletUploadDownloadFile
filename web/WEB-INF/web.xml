@@ -15,7 +15,7 @@
     </filter-mapping>
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>home</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>tempfile.dir</param-name>

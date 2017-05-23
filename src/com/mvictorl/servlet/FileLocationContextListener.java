@@ -1,6 +1,4 @@
-package com.mvictorl.servlet; /**
- * Created by Victor on 19.05.2017.
- */
+package com.mvictorl.servlet;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
